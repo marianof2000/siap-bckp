@@ -1,3 +1,4 @@
+# https://www.python-course.eu/tkinter_radiobuttons.php
 import tkinter as tk
 
 root = tk.Tk()
