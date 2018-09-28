@@ -22,13 +22,9 @@ siaps[2]=["impanu","/home/ciie-tordillo/Escritorio/borrar/python/Siap-bckp/files
 siaps[3]=["impmen","/home/ciie-tordillo/Escritorio/borrar/python/Siap-bckp/files/"]
 siaps[4]=["emerg1","/home/ciie-tordillo/Escritorio/borrar/python/Siap-bckp/files/"]
 siaps[5]=["emerg2","/home/ciie-tordillo/Escritorio/borrar/python/Siap-bckp/files/"]
-# initializing the choice, i.e. Python
-opciones1 = [("Impuestos provinciales",1),
-			("Impuestos anuales c:\\intercambio\\DGI",2),
-			("Impuestos mensuales c:\\SIAp",3),
-			("SIAp de emergencia 1 c:\\intercambio\\DGI2",4),
-			("SIAp de emergencia 2 c:\\intercambio\\DGI3",5),
-			("Salir del programa",6),
+opciones1 = [("Impuestos provinciales",1), ("Impuestos anuales c:\\intercambio\\DGI",2),
+			("Impuestos mensuales c:\\SIAp",3), ("SIAp de emergencia 1 c:\\intercambio\\DGI2",4),
+			("SIAp de emergencia 2 c:\\intercambio\\DGI3",5), ("Salir del programa",6),
 			("Borrar la ruta",7)]
 
 def siapBackup(archivo, ruta, origen):
@@ -71,7 +67,6 @@ def comandos():
 	elif entrada == 7:
 		borrar()
 	else: #implementar el case
-		#mensaje.config(text="Ejecutando ...")
 		try:
 			mensaje.config(text="Ejecutando ...")
 			siapBackup(siaps[entrada][0],destino,siaps[entrada][1])
@@ -87,7 +82,6 @@ for opcion, elec in opciones1:
     Radiobutton(raiz, text=opcion, padx = 20, variable=eleccion, value=elec).pack(anchor=W)
 
 mensaje=Label(raiz, text="Ejecute una opción...", font=("Arial",10), padx=20, justify = LEFT)
-#mensaje.place(x=20,y=150)
 mensaje.pack(side=LEFT)
 
 boton1=Button(raiz, text="Ejecutar", font=("Arial",12), command=comandos)
