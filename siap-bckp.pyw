@@ -77,7 +77,6 @@ def comandos():
 
 Label(raiz, text="Elija la acción", justify = LEFT, padx = 20, font=("Arial",14)).pack()
 
-Radiobutton(raiz, height=7).place(anchor=W)
 for opcion, elec in opciones1:
     Radiobutton(raiz, text=opcion, padx = 20, variable=eleccion, value=elec).pack(anchor=W)
 
